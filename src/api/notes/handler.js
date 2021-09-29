@@ -1,4 +1,5 @@
-class NotesHandler{
+/* eslint-disable no-underscore-dangle */
+class NotesHandler {
   constructor(service) {
     this._service = service;
 
@@ -42,7 +43,7 @@ class NotesHandler{
       status: 'success',
       data: {
         notes,
-      }
+      },
     };
   }
 
@@ -56,7 +57,7 @@ class NotesHandler{
         status: 'success',
         data: {
           note,
-        }
+        },
       };
     } catch (error) {
       const response = h.response({
@@ -65,7 +66,7 @@ class NotesHandler{
       });
 
       response.code(404);
-      return response;      
+      return response;
     }
   }
 
@@ -86,8 +87,8 @@ class NotesHandler{
       });
 
       response.code(404);
-      return response; 
-    }    
+      return response;
+    }
   }
 
   deleteNoteByIdHandler(request, h) {
@@ -107,7 +108,7 @@ class NotesHandler{
       });
 
       response.code(404);
-      return response; 
+      return response;
     }
   }
 }
