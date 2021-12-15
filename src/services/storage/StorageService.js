@@ -12,7 +12,6 @@ class StoraegService {
   }
 
   writeFile(file, meta) {
-    console.log(meta);
     const filename = +new Date() + meta.filename;
     const path = `${this._folder}/${filename}`;
 
